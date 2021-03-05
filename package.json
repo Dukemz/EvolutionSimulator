@@ -1,0 +1,24 @@
+{
+  "name": "EvolutionSimulator",
+  "version": "1.0.0",
+  "description": "Attempt at an evolution/natural selection simulator in JS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dukemz/EvolutionSimulator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dukemz/EvolutionSimulator/issues"
+  },
+  "homepage": "https://github.com/Dukemz/EvolutionSimulator#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^3.0.3"
+  }
+}

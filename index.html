@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="description" content="Attempt at an evolution/natural selection simulator in JS.">
+  <meta name="theme-color" content="#15a9ee">
+	<meta property="og:title" content="Dukemz's Evolution Simulator">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://multiplayer-game.dukemz.repl.co/">
+  <meta property="og:description" content="Attempt at an evolution/natural selection simulator in JS.">
+  <meta property="og:image" content="https://github.com/Dukemz.png">
+	<meta property="twitter:image" content="https://github.com/Dukemz.png">
+
+	<title>DES (not connected)</title>
+
+	<link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+  <p><span id="ping">Ping: ---ms</span><span id="count" style="float:right">0 player(s)</span></p>
+  <p><button id="button" onclick="makeCreature()" class="w3-button w3-round w3-grey">Create Creature</button></p>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js">
+	</script>
+
+	<script src="/socket.io/socket.io.js">
+	</script>
+	<script src="script.js">
+	</script>
+</body>
+
+</html>
