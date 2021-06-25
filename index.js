@@ -67,9 +67,9 @@ io.on("connection", socket => {
   socket.on('makeCreature', (position) => {
     if(data.players[socket.id].creatures.length < 5) {
       data.players[socket.id].creatures.push({
-      size: config.creatureSize,
-      speed: config.creatureSpeed,
-      pos: position
+        size: config.creatureSize,
+        speed: config.creatureSpeed,
+        pos: position
       });
     }
   });

@@ -7,7 +7,7 @@ function setup() {
   noStroke();
 };
 function randomCol() { return {r:Math.random()*255, g:Math.random()*255, b:Math.random()*255}; }
-function randomPos() { return {x:Math.round(Math.random()*600), y:Math.round(Math.random()*600)}; }
+function randomPos() { return {x:Math.round(Math.random()*584), y:Math.round(Math.random()*584)}; }
 
 function makeCreature() {
   if(me.creatures.length < 5) {
