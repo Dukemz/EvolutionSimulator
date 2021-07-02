@@ -1,13 +1,10 @@
 // Evolution simulator thing by Dukemz lol (alpha)
-
+console.log("evolution sim lmao");
 // le file loading
 const config = require('./config.json');
 
+const GameServer = require('./classes/GameServer');
+const server = new GameServer(config);
+console.log(server);
 
-
-// listen on whatever port i guess lol
-// (change 3000 to env variable later)
-http.listen(3000, () => {
-  console.log(`Server online - listening on port 3000.`);
-  // updateInterval = setInterval(() => io.sockets.emit('update', data), 10);
-});
+server.start(config);
