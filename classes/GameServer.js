@@ -1,6 +1,7 @@
 // le module loading
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 
 module.exports = class GameServer {
   /**
@@ -20,10 +21,19 @@ module.exports = class GameServer {
       const ip = req.headers['x-forwarded-for'] ? req.headers['x-forwarded-for'].split(',')[0] : req.ip;
       console.log(`GET request to [${req.url}] from ${ip}`)
       
-      if(req.url.includes('package') || req.url.includes('node_modules')) return res.status(403).send("lol no");
-      res.sendFile(path.resolve(__dirname + '/..') + req.url);
+      if(req.url.includes('package') || req.url.includes('node_modules')) {
+        res.status(403).send("lol no");
+        return false;
+      }
+      const file = path.resolve(__dirname + '/..') + req.url;
+      if(!fs.existsSync(file)) {
+        res.status(404).send("yo that doesn't exist");
+        return false;
+      } else {
+        res.sendFile(file);
+      }
     });
-    return true;
+    return true; // returns true if successful
   }
 
   async start() { // start the server

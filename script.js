@@ -1,4 +1,27 @@
-/* Setup */
+// Evolution Simulator by Dukemz (alpha) //
+
+// Setup.
+const socket = io();
+function setup() { // p5.js setup function
+  // Create the canvas
+  createCanvas(600, 600);
+  // Remove outline on players
+  noStroke();
+}
+// Random colour/position functions 
+function randomCol() { return {r:Math.random()*255, g:Math.random()*255, b:Math.random()*255}; }
+function randomPos() { return {x:Math.round(Math.random()*584), y:Math.round(Math.random()*584)}; }
+
+// Keys, such as movement (WASD)
+const keys = {
+  W: 87,
+  A: 65,
+  S: 83,
+  D: 68
+}
+
+/* old code loggers
+
 const socket = io();
 function setup() {
   // Create the canvas
@@ -23,7 +46,7 @@ const A = 65;
 const S = 83;
 const D = 68;
 
-/* Update & Events */
+// Update & Events //
 
 socket.on('pong', () => { // Event for calculating ping
   latency = Date.now() - startTime;
@@ -84,3 +107,5 @@ socket.on('disconnect', () => { // Whenever disconnected from the server
   document.getElementById('ping').innerHTML = `Ping: ---ms`;
   document.getElementById('count').innerHTML = `0 player(s)`;
 });
+
+*/

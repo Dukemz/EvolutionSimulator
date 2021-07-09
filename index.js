@@ -1,5 +1,5 @@
 // Evolution simulator thing by Dukemz lol (alpha)
-console.log("evolution sim lmao");
+console.log("Evolution Simulator - by Dukemz ()");
 // le file loading
 const config = require('./config.json');
 
